@@ -1,0 +1,186 @@
+/* General Styles */
+.termas-solares {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #fff;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.termas-solares section {
+  margin-bottom: 40px;
+}
+
+.termas-solares h1 {
+  font-size: 2em;
+  color: #007bff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.6em;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #00d4ff, #007bff);
+}
+
+.termas-solares p {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 15px;
+ 
+}
+
+/* Tanques y Paneles Containers */
+.tanques-contenedor,
+.paneles-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.tanque,
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tanque:hover,
+.panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tanque img,
+.panel img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tanque h2,
+.panel h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #007bff;
+}
+
+/* Tecnología en Soldaduras */
+.tecnologia-soldaduras {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.soldadura {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soldadura:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.soldadura .text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.soldadura h2 {
+  font-size: 1.4em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.soldadura img {
+  max-width: 290px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.soldadura img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .termas-solares h1 {
+    font-size: 1.6em;
+  }
+
+  .section-title {
+    font-size: 1.4em;
+  }
+
+  .tanque,
+  .panel {
+    width: 100%;
+  }
+
+  .soldadura {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .soldadura .text-content {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .soldadura img {
+    max-width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tanque,
+.panel,
+.soldadura {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

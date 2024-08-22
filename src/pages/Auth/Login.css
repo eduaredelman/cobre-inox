@@ -1,0 +1,57 @@
+/* Estilos generales para el contenedor del login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la pantalla */
+    background-color: #f0f2f5; /* Fondo suave */
+  }
+  
+  .login-form {
+    background: white; /* Fondo blanco */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 300px; /* Ancho del formulario */
+    text-align: center; /* Centrar contenido */
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px; /* Espacio inferior del título */
+    color: #333; /* Color del título */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Espacio inferior entre grupos de formulario */
+    text-align: left; /* Alinear texto a la izquierda */
+  }
+  
+  .form-group label {
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 8px; /* Espacio inferior de la etiqueta */
+    color: #555; /* Color de la etiqueta */
+  }
+  
+  .form-group input {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir relleno y borde en el tamaño del elemento */
+  }
+  
+  .login-form button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambiar cursor al pasar */
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar */
+  }
+  

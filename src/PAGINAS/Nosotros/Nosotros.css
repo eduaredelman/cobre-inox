@@ -1,0 +1,200 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sección Nosotros */
+.nosotros {
+  max-width: 1135px;
+  margin: 20px auto 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nosotros h1, .nosotros h2 {
+  font-size: 1.9em;
+  color: #0084ff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.nosotros h1::after, .nosotros h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #007bff);
+  margin: 10px auto 0;
+}
+
+.nosotros h3 {
+  font-size: 1.5em;
+  color: #047ff9cd;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nosotros section {
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+/* Sección Tiendas */
+.tiendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.tienda {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tienda:hover {
+  transform: translateY(-5px);
+}
+
+.tienda iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Sección Información */
+.informacion .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.informacion ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.informacion li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.informacion li::before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.informacion img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Sección Información Técnica */
+#info-tecnica .imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 100px;
+  margin-top: 30px;
+}
+
+#info-tecnica .imagen-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#info-tecnica .imagen {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+#info-tecnica .imagen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+}
+
+#info-tecnica .imagen-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+#info-tecnica .imagen-container:hover .imagen-overlay {
+  opacity: 1;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  #info-tecnica .imagen {
+    height: 200px;
+  }
+}
+
+
+/* Sección Línea Empresarial */
+#linea-empresarial .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+ 
+}
+
+#linea-empresarial .card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#linea-empresarial .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .nosotros h1,
+  .nosotros h2 {
+    font-size: 1.8em;
+  }
+
+  .nosotros h3 {
+    font-size: 1.3em;
+  }
+}

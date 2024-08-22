@@ -1,0 +1,125 @@
+.productos-container {
+  padding: 20px;
+  background-color: #f0f4f8;
+  color: #333;
+  text-align: center;
+}
+
+.productos-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007acc;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 40px auto 0;
+  padding: 20px;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.producto-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.producto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.producto-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.producto-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.consultar-btn, .comprar-btn {
+  flex: 1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultar-btn {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+.comprar-btn {
+  background-color: #007bff;
+}
+
+.consultar-btn:hover {
+  background-color: #218838;
+}
+
+.comprar-btn:hover {
+  background-color: #0056b3;
+}
+
+.consultar-btn svg, .comprar-btn svg {
+  margin-right: 5px;
+}
+
+.agradecimiento-container {
+  margin-top: 40px;
+}
+
+.agradecimiento-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .consultar-btn, .comprar-btn {
+    margin: 5px 0;
+  }
+}

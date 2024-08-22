@@ -1,0 +1,121 @@
+.carrusel-container {
+  max-width: 1300px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0; /* Adjust this value to reduce space above the carousel */
+}
+
+.carrusel-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000000; /* Use black initially to customize individual parts */
+}
+
+.carrusel-title span.cobre {
+  color: red;
+}
+
+.carrusel-title span.inox {
+  color: gray;
+}
+
+.carrusel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 2);
+}
+
+.carrusel-item {
+  min-width: 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-item img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item:hover img {
+  transform: scale(1.05);
+}
+
+.carrusel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.315);
+  color: white;
+  padding: 0px;
+  text-align: center;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.carrusel-caption h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.carrusel-caption p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+}
+
+.carrusel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carrusel-button.prev {
+  left: 10px;
+}
+
+.carrusel-button.next {
+  right: 10px;
+}
+
+.carrusel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .carrusel-item {
+    min-width: 50%;
+  }
+
+  .carrusel-button {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .carrusel-title {
+    font-size: 1.5em;
+  }
+}
